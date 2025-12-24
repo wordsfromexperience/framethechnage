@@ -1,0 +1,188 @@
+/* ---------- GLOBAL ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f3ef;
+  font-family: 'Caveat', cursive;
+  color: #2e2e2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- MODALS ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fffdf8;
+  padding: 28px 32px;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.modal-note {
+  margin-top: 18px;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* ---------- LANGUAGE BUTTONS ---------- */
+.language-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.language-buttons button {
+  padding: 10px 16px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #efe7d8;
+  font-family: inherit;
+  transition: transform 0.1s ease, background 0.1s ease;
+}
+
+.language-buttons button:hover {
+  background: #e2d7c3;
+  transform: translateY(-2px);
+}
+
+/* ---------- INTRO MODAL ---------- */
+#introModal {
+  display: none;
+}
+
+#introText {
+  white-space: pre-line;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* ---------- CLOSE BUTTON ---------- */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* ---------- INPUT BOX ---------- */
+#inputBox {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 420px;
+}
+
+#noteInput {
+  width: 100%;
+  height: 110px;
+  padding: 14px;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  background: #fffdf8;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+#noteInput:focus {
+  outline: none;
+}
+
+/* ---------- LEAVE BUTTON ---------- */
+#leaveNoteBtn {
+  margin-top: 14px;
+  padding: 10px 22px;
+  font-size: 1.2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #2e2e2e;
+  color: white;
+  font-family: inherit;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+#leaveNoteBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ---------- NOTES BOARD ---------- */
+#board {
+  margin-top: 50px;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ---------- NOTE ---------- */
+.note {
+  background: #fff2a8;
+  padding: 18px 20px;
+  width: 180px;
+  min-height: 120px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  white-space: pre-wrap;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ---------- NOTE ANIMATION ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- BRANDING ---------- */
+#branding {
+  margin-top: auto;
+  padding: 14px 0;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}

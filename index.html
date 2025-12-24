@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leave Something Here</title>
+
+  <!-- Handwriting font -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LANGUAGE SELECTION MODAL -->
+  <div id="languageModal" class="modal">
+    <div class="modal-content">
+      <p class="modal-title">Which language do you feel most yourself in?</p>
+
+      <div class="language-buttons">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('fr')">Français</button>
+        <button onclick="setLanguage('es')">Español</button>
+        <button onclick="setLanguage('la')">Latina</button>
+        <button onclick="setLanguage('it')">Italiano</button>
+        <button onclick="setLanguage('ta')">தமிழ்</button>
+      </div>
+
+      <p class="modal-note">You can change this later.</p>
+    </div>
+  </div>
+
+  <!-- INTRO MESSAGE MODAL -->
+  <div id="introModal" class="modal">
+    <div class="modal-content">
+      <p id="introText"></p>
+      <button class="close-btn" onclick="closeIntro()">×</button>
+    </div>
+  </div>
+
+  <!-- NOTE INPUT -->
+  <div id="inputBox">
+    <textarea
+      id="noteInput"
+      placeholder="Write something you once needed to hear..."
+    ></textarea>
+
+    <button id="leaveNoteBtn">Leave it here</button>
+  </div>
+
+  <!-- NOTES BOARD -->
+  <div id="board"></div>
+
+  <!-- BRANDING -->
+  <footer id="branding">FrameTheChange</footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
